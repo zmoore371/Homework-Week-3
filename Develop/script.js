@@ -46,7 +46,7 @@ function generatePassword(length, lower, upper, number, symbol) {
   const typesArray = [{lower}, {upper}, {number}, {symbol}].filter
   (item => Object.values(item)[0]);
 
-  if(typesCount === 0) {
+  if(typesCount === 0 || length <= 7 || length >= 129) {
 		return '';
 	}
 	
