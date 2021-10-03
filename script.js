@@ -7,8 +7,6 @@ const randomFunction = {
   symbol: randomSymbol,
 };
 
-
-
 // Write password to the #password input
 function writePassword() {
   
@@ -19,7 +17,6 @@ function writePassword() {
   var getSymbols = window.confirm("Would you like your password to have special characters / symbols ? (! \" # $ % & \' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { } | ` ) y/n");
   var length = Number(getCharacters);
   
-
   function numCharacters(){
   if (getCharacters <= 7) {
       window.alert("Selection must be between 8 and 128 characters!")
@@ -41,7 +38,7 @@ function generatePassword(length, lower, upper, number, symbol) {
  
   let generatedPassword = '';
   const typesCount = lower + upper + number + symbol;
-  console.log('typesCount: ', typesCount);
+  // console.log('typesCount: ', typesCount);
 
   const typesArray = [{lower}, {upper}, {number}, {symbol}].filter
   (item => Object.values(item)[0]);
